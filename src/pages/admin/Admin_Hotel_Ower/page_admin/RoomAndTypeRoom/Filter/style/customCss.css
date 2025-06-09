@@ -1,0 +1,5 @@
+/* Thay đổi màu nền và màu chữ khi accordion được mở */
+.accordion-button[aria-expanded="true"] {
+    background-color: #fff; /* Màu nền trắng */
+    color: black; /* Màu chữ đen */
+}

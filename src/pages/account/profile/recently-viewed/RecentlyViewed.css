@@ -1,0 +1,71 @@
+.custom-card-body {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.custom-card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.custom-card-text {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Nổi bật giá tiền */
+.custom-price-text {
+    font-weight: 600;
+    color: #FEA116; /* Màu xám nhẹ, phù hợp với phong cách nhẹ nhàng */
+}
+
+
+/* Phân trang */
+
+
+.star {
+    font-size: 30px; /* Kích thước sao */
+    color: #ccc; /* Màu sao khi chưa chọn */
+}
+
+.star.filled {
+    color: #FEA116; /* Màu vàng cho sao đã chọn */
+}
+/* Tối ưu cho từng nhóm thông tin */
+.room-info h5 {
+    font-weight: bold;
+    color: #FEA116; /* Màu chủ đạo */
+    font-size: 1.2rem;
+}
+
+.time-info p, .price-info p, .amenities-info p, .rating-info p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* Thêm một chút cách điệu cho tiêu đề mỗi nhóm */
+.room-info, .time-info, .price-info, .amenities-info, .rating-info {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.room-info:last-child, .time-info:last-child, .price-info:last-child, .amenities-info:last-child, .rating-info:last-child {
+    border-bottom: none;
+}
+
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-headers {
+    background-color: #FEA116;
+    color: white;
+}
+
+.modal-footers {
+    display: flex;
+    justify-content: flex-end;
+}
+

@@ -1,0 +1,21 @@
+/* Invoice.css */
+
+@media print {
+    /* Ẩn tất cả các thành phần */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Chỉ hiển thị nội dung trong .invoice-content */
+    .invoice-content, .invoice-content * {
+        visibility: visible;
+    }
+
+    /* Căn chỉnh nội dung hóa đơn để in */
+    .invoice-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}

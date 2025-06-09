@@ -1,0 +1,68 @@
+/* File: ImageSlider.css */
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.image-container {
+  display: flex;
+  overflow-x: scroll; /* Thêm thanh cuộn ngang */
+  scroll-behavior: smooth; /* Di chuyển mượt */
+  width: 80%;
+  scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+.image-container::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
+}
+
+.image-box {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  width: 100px;
+  height: 100px; /* Kích thước hình vuông */
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-box:hover .add-text {
+  display: block;
+}
+
+.add-text {
+  font-size: 1.2em;
+  color: #666;
+  cursor: pointer;
+  display: none; /* Ẩn khi không hover */
+}
+
+.prev,
+.next {
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.next {
+  margin-left: 10px;
+}

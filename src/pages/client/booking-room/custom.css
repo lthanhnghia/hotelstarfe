@@ -1,0 +1,289 @@
+/* Title */
+.booking-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form Container */
+.box-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Required Fields */
+.required {
+  color: red;
+}
+
+/* Selected Rooms */
+.box-selected-rooms ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.box-selected-rooms li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  margin-left: 10px;
+}
+
+.badge-secondary {
+  background-color: #6c757d;
+}
+
+.badge-info {
+  background-color: #17a2b8;
+}
+
+/* Special Request */
+.hotel-box-note {
+  margin-top: 20px;
+}
+
+.box-title {
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.box-title i {
+  margin-right: 10px;
+}
+
+.txt_note {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Cải thiện giao diện tổng thể */
+.create-booking {
+  padding: 30px;
+  margin-top: 30px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Tiêu đề form */
+.booking-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #ffc107; /* Màu chủ đạo */
+  padding-bottom: 10px;
+}
+
+/* Cải thiện khoảng cách giữa các hàng */
+.form-row {
+  margin-bottom: 25px;
+}
+
+/* Cải thiện label */
+.custom-form-label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Trường input */
+.custom-form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.custom-form-control:focus {
+  border-color: #ffc107; /* Màu chủ đạo */
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+  background-color: #fff;
+}
+
+/* Xử lý phần input khi không hợp lệ */
+.custom-form-control:invalid {
+  border-color: #e74c3c;
+}
+
+/* Required text */
+.required {
+  color: #e74c3c;
+}
+
+/* Danh sách phòng đã chọn */
+.box-selected-rooms {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room-items {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  font-size: 15px;
+}
+
+.room-items:hover {
+  background-color: #f2f2f2;
+}
+
+.room-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.guest-limit .badge {
+  background-color: #ffc107; /* Màu chủ đạo */
+  color: white;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Nút submit */
+.box-submit {
+  text-align: right;
+}
+
+.custom-submit-btn {
+  background-color: #ffc107; /* Màu chủ đạo */
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+  background-color: #e68900;
+  cursor: pointer;
+}
+
+.custom-submit-btn:focus {
+  outline: none;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .create-booking {
+    padding: 20px;
+  }
+
+  .booking-title {
+    font-size: 20px;
+  }
+
+  .custom-form-control {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .room-items {
+    font-size: 14px;
+  }
+
+  .custom-submit-btn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+/* Cải thiện khoảng cách giữa các ô input */
+.create-booking .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Khoảng cách giữa các ô */
+}
+
+/* Điều chỉnh các ô input để chúng không dính nhau */
+.create-booking .form-row .col-lg-6,
+.create-booking .form-row .col-md-6 {
+  flex: 0 0 calc(50% - 10px); /* Giảm chiều rộng mỗi cột khoảng 5px */
+}
+
+/* Nếu màn hình nhỏ, cột sẽ chiếm hết chiều rộng */
+@media (max-width: 768px) {
+  .create-booking .form-row .col-lg-6,
+  .create-booking .form-row .col-md-6 {
+    flex: 0 0 100%; /* Khi màn hình nhỏ, mỗi cột sẽ chiếm toàn bộ chiều rộng */
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* Đảm bảo các nút có cùng một khoảng cách */
+.box-submit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Nút Quay lại */
+.back-button button {
+  background-color: #feaf39; /* Màu nền vàng sáng */
+  color: #fff; /* Màu chữ trắng để tương phản với nền */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none; /* Loại bỏ viền nếu cần */
+  font-weight: bold;
+}
+
+/* Nút Xác nhận */
+.submit-button button {
+  background-color: #feaf39;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Bố cục nhóm nút */
+.box-submit .button-group {
+  display: flex;
+  justify-content: center; /* Căn giữa các nút */
+  gap: 20px; /* Khoảng cách giữa các nút */
+  padding: 10px 0;
+}
+
+/* Style chung cho các nút */
+.custom-back-btn,
+.custom-cancel-btn,
+.custom-submit-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Hiệu ứng khi hover */
+}
+

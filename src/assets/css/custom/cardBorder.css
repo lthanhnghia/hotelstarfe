@@ -1,0 +1,17 @@
+.border-cutom {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bo góc viền */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng đổ */
+}
+
+/* Chỉ hiển thị nút sổ danh sách phòng trên màn hình nhỏ (d-md-none) */
+.d-md-none {
+  display: block;
+}
+
+/* Nút sổ danh sách phòng sẽ ẩn trên màn hình lớn (từ 768px trở lên) */
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none;
+  }
+}

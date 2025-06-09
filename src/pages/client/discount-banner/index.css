@@ -1,0 +1,100 @@
+.promotion-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    z-index: 1050;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f9d423, #ff4e50); /* Thay đổi màu nền */
+    color: white;
+    box-shadow: 0 0 10px #ff4e50, 0 0 20px #f9d423; /* Thay đổi màu viền */
+    animation: borderFlash 1.5s infinite;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .promotion-content h5 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .promotion-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .promotion-button {
+    background: white;
+    color: #ff4e50; /* Màu nút đỏ */
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .promotion-button:hover {
+    background: #ff4e50;
+    color: white;
+    transform: scale(1.1);
+  }
+
+  .promotion-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff5722;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1000;
+  }
+  
+  .collapse-button {
+    background: transparent; /* Không có nền */
+    border: none; /* Xóa viền */
+    color: white; /* Màu chữ trắng */
+    font-weight: bold;
+    font-size: 1.2rem; /* Tăng kích thước */
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%; /* Hình tròn */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .collapse-button:hover {
+    background: rgba(255, 255, 255, 0.2); /* Nền mờ khi hover */
+    transform: scale(1.1); /* Phóng to nhẹ */
+  }
+  
+  
+  @keyframes borderFlash {
+    0% {
+      box-shadow: 0 0 10px #ff4e50, 0 0 20px #f9d423; /* Màu viền đỏ */
+    }
+    50% {
+      box-shadow: 0 0 30px #ff4e50, 0 0 40px #f9d423; /* Màu viền đỏ */
+    }
+    100% {
+      box-shadow: 0 0 10px #ff4e50, 0 0 20px #f9d423; /* Màu viền đỏ */
+    }
+  }
+  
+  

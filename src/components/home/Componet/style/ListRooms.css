@@ -1,0 +1,72 @@
+/* Tùy chỉnh danh sách phòng */
+.custom-room-list {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fffaf2; /* Nền nhạt */
+}
+
+.custom-room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom-room-item:hover {
+  background-color: #fff6e1;
+  transform: translateY(-2px); /* Hiệu ứng khi hover */
+}
+
+.custom-room-item.selected {
+  background-color: #ffe7c2; /* Màu nền khi đã chọn */
+  border-color: #fea116;
+}
+
+.custom-room-item.selected span {
+  font-weight: bold;
+  color: #d87d0f;
+}
+
+.custom-room-btn {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.custom-room-btn.select {
+  background-color: #fea116;
+  color: #fff;
+  border: none;
+}
+
+.custom-room-btn.select:hover {
+  background-color: #d87d0f;
+}
+
+.custom-room-btn.selected {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border: none;
+}
+
+/* Phân trang */
+.custom-pagination .page-item.active .page-link {
+  background-color: #fea116;
+  border-color: #fea116;
+  color: #fff;
+}
+
+.custom-pagination .page-link {
+  color: #fea116;
+}
+
+.custom-pagination .page-link:hover {
+  color: #d87d0f;
+}

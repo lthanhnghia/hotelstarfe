@@ -1,0 +1,150 @@
+/* Màu chủ đạo */
+:root {
+  --primary-color: #fea116;
+  --secondary-color: #d9534f; /* Màu phụ */
+  --highlight-bg: #fff9e6; /* Nền nổi bật */
+  --text-color: #333333;
+  --light-gray: #f4f4f4;
+  --dark-gray: #666666;
+}
+
+/* === Modal Header === */
+.room-detail-modal .modal-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* === Carousel === */
+.room-carousel-image {
+  border: 2px solid var(--light-gray);
+  border-radius: 5px;
+  object-fit: cover; /* Giữ hình ảnh cân đối */
+}
+
+/* === Room Info Section === */
+.room-detail-info {
+  color: var(--text-color);
+  font-size: 14px; /* Chuẩn hóa kích thước chữ */
+}
+
+.room-detail-info p strong {
+  color: var(--primary-color);
+}
+
+.room-detail-description {
+  margin-top: 20px;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* === Amenities === */
+.room-detail-info .list-group-item {
+  font-size: 14px;
+  color: var(--text-color);
+  border: none;
+  padding: 5px 10px;
+}
+
+/* === Giá Phòng === */
+.room-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid var(--primary-color); /* Đường viền vàng nổi bật */
+  border-radius: 8px;
+  background-color: var(--highlight-bg); /* Nền màu nhạt */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room-price-container span:first-child {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.room-detail-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--secondary-color); /* Màu đỏ nổi bật */
+}
+
+/* Hiệu ứng nổi bật giá */
+@keyframes priceHighlight {
+  0% {
+    color: var(--secondary-color);
+  }
+  100% {
+    color: #c9302c;
+  }
+}
+
+/* Giá giảm giá */
+.price-original {
+  text-decoration: line-through;
+  color: var(--dark-gray);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.price-final {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.discount-percent {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.price-no-discount {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Giá nổi bật */
+.highlighted-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  background: var(--highlight-bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* === Footer === */
+.room-detail-modal .modal-footer {
+  border-top: 1px solid var(--light-gray);
+  justify-content: center;
+  padding: 10px;
+}
+
+/* === Rating === */
+.rating .star {
+  font-size: 16px;
+  margin-right: 2px;
+  color: var(--primary-color);
+}
+
+.feedback-card {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f8f9fa; /* Màu nền nhẹ */
+}
+
+.feedback-container {
+  max-width: 800px;
+  margin: auto; /* Căn giữa container đánh giá */
+}
+
+.half-star {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}

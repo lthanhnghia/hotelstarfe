@@ -1,0 +1,33 @@
+.pagination-btn {
+  transition: all 0.3s ease;
+}
+.pagination-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.pagination-btn.active {
+  font-weight: bold;
+  border-color: #feaf39;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cash-info,
+.online-info {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.cash-info p,
+.online-info p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
+

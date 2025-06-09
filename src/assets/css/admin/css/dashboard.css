@@ -1,0 +1,87 @@
+.card {
+  background-color: #fff;
+  border: none;
+}
+
+/* setup chart */
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* responsive for dashboard */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem; /* Giảm padding cho card */
+  }
+  canvas {
+    max-width: 100%; /* Đảm bảo biểu đồ không vượt quá chiều rộng */
+    height: auto; /* Giữ tỉ lệ của biểu đồ */
+  }
+  .row {
+    flex-direction: column; /* Sắp xếp biểu đồ theo cột trên màn hình nhỏ */
+  }
+  .col-md-6,
+  .col-md-5 {
+    margin-bottom: 1rem; /* Thêm khoảng cách giữa các biểu đồ */
+  }
+  .vertical-line {
+    display: none; /* Ẩn dấu gạch */
+  }
+}
+
+.vertical-line {
+  width: 1px; /* Độ dày của dấu gạch */
+  background-color: #d6d6d6; /* Màu sắc của dấu gạch */
+  height: 80px; /* Chiều cao của dấu gạch */
+  margin: 0 10px; /* Khoảng cách xung quanh dấu gạch */
+  align-self: center; /* Căn giữa dấu gạch trong cột */
+}
+/* .account-management tbody, td, tfoot, th, thead, tr {
+  border-style: none !important;
+} */
+.border-bottom-invoice p{
+  margin-top: 22px !important;
+}
+.account-client .table-responsive{
+  scrollbar-width: none;
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--bs-nav-link-hover-color) !important;
+}
+.header-nav .nav-link {
+  color: var(--bs-nav-link-color);
+}
+.header-toggler{
+  color: var(--bs-nav-link-color);
+}
+.header-toggler:focus, .header-toggler:hover{
+  color: var(--bs-nav-link-hover-color) !important;
+}
+body.dark-mode .app-header {
+  background-color: #333; /* Đặt màu nền tối */
+  color: #fff; /* Đặt màu chữ sáng */
+}
+
+body.light-mode .app-header {
+  background-color: #fff; /* Đặt màu nền sáng */
+  color: #333; /* Đặt màu chữ tối */
+}
+.border-bottom {
+  border-bottom: 1px solid #323a49;
+}
+.pagination .page-item {
+  margin: 0 5px; /* Tăng khoảng cách giữa các số trang */
+  border: none;
+}
+
+.pagination .page-link {
+  padding: 8px 12px; /* Tăng kích thước các nút để dễ bấm hơn */
+  border: none;
+}
+.pagination .page-link:focus {
+  box-shadow: none;
+}
+.table td {
+  border-bottom-width: 0px !important;
+}

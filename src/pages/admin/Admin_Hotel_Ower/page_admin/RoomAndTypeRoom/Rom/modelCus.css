@@ -1,0 +1,10 @@
+.dimmed .modal-backdrop {
+  opacity: 0.5; /* Adjust this value to your preference */
+}
+.fade .modal .show {
+  background-color: #333d3f;
+}
+
+.modal-wides{
+    max-width: 750px;
+}

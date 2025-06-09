@@ -1,0 +1,7 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.121); /* Đặt màu nền thành màu đen */
+  width: 40px; /* Kích thước của nút */
+  height: 40px;
+  background-size: 100%; /* Đảm bảo biểu tượng không bị cắt */
+}

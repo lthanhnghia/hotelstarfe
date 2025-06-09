@@ -1,0 +1,13 @@
+.date-filter-input {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border mờ */
+    border-radius: 8px; /* Bo tròn */
+    padding: 8px; /* Thêm khoảng cách cho ô input */
+    width: 100%; /* Tùy chọn: tăng độ rộng để phù hợp giao diện */
+    font-size: 14px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 12%);
+}
+
+
+.date-filter-input::placeholder {
+    color: #6c757d; /* Màu cho placeholder */
+}

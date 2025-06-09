@@ -1,0 +1,51 @@
+.image-gallery .image-card,
+.image-gallery .add-image-card {
+    border: 2px dashed #ddd;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỉ lệ ảnh và cắt phần thừa nếu không vừa khung */
+    border-radius: 8px;
+}
+
+.add-image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: gray;
+}
+
+.add-image-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Căn giữa các nút */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 3px 0; /* Thêm khoảng đệm dọc */
+}
+
+.button-container button {
+    flex: 1; /* Đặt chiều rộng của nút bằng nhau */
+    margin: 0 1px; /* Khoảng cách giữa các nút */
+    font-size: 0.8rem; /* Giảm kích thước chữ */
+    padding: 2px 0px; /* Giảm khoảng đệm của nút */
+}
+
+.button-container button:last-child {
+    margin-right: 0; /* Không có khoảng cách bên phải cho nút cuối cùng */
+}

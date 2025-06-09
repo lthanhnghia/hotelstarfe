@@ -1,0 +1,19 @@
+.Custom-width-modal {
+  max-width: 1100px;
+}
+
+.custom-modal-title {
+  font-size: 1.2rem; /* Điều chỉnh kích thước chữ tiêu đề */
+}
+
+.custom-form-label {
+  font-size: 0.8rem; /* Điều chỉnh kích thước chữ cho nhãn */
+}
+
+.custom-button {
+  font-size: 0.9rem; /* Điều chỉnh kích thước chữ cho nút */
+}
+
+.input-width {
+    width: 100%; /* Makes input fields take the full width of their parent */
+}

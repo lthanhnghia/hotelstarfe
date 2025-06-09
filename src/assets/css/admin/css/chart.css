@@ -1,0 +1,20 @@
+#lineChar {
+  width: 100%; /* Để chiều rộng là 100% */
+  height: 300px; /* Đặt chiều cao cố định hoặc theo yêu cầu */
+  max-height: 3000px; /* Đảm bảo chiều cao tối đa nếu cần */
+  display: block; /* Đảm bảo canvas là một block element */
+}
+
+@media (max-width: 576px) {
+  #lineChar {
+    height: auto; /* Giảm chiều cao trên điện thoại */
+  }
+}
+.w-slot {
+  width: 150px; /* Đặt chiều rộng cho dropdown */
+  margin-left: auto; /* Đẩy sang bên phải */
+}
+
+body{
+  background-color: #eee;
+}

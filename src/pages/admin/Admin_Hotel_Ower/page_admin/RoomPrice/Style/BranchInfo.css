@@ -1,0 +1,25 @@
+.branch-info-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.branch-info-container p {
+  margin-bottom: 5px;
+}
+
+.branch-info-container .text-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.branch-info-container .btn-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.branch-info-container .btn-link:hover {
+  text-decoration: underline;
+}

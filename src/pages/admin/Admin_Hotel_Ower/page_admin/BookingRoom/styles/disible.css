@@ -1,0 +1,58 @@
+.input-enabled {
+  background-color: #fff; /* Màu nền khi có thể nhập */
+}
+
+.input-disabled {
+  background-color: #f8f9fa; /* Màu nền khi không thể nhập */
+}
+
+.checkbox-group .form-check {
+  margin-bottom: 0px; /* Giảm khoảng cách giữa các checkbox */
+}
+
+.custom-input{
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+.badge-pending {
+  background-color: #FFA500; /* Màu cam nhạt */
+  color: white;
+}
+
+.badge-customer-confirmed {
+  background-color: #00CED1; /* Màu xanh lơ */
+  color: white;
+}
+
+.badge-hotel-confirmed {
+  background-color: #1E90FF; /* Màu xanh dương */
+  color: white;
+}
+
+.badge-in-use {
+  background-color: #32CD32; /* Màu xanh lá sáng */
+  color: white;
+}
+
+.badge-completed {
+  background-color: #228B22; /* Màu xanh lá đậm */
+  color: white;
+}
+
+.badge-cancelled {
+  background-color: #B22222; /* Màu đỏ đậm */
+  color: white;
+}
+
+.badge-expired {
+  background-color: #696969; /* Màu xám đen */
+  color: white;
+}
+
+.badge-default {
+  background-color: #D3D3D3; /* Màu xám nhạt */
+  color: black;
+}

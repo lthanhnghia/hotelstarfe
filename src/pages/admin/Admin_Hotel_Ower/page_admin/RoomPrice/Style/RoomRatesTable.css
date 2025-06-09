@@ -1,0 +1,10 @@
+/* Reduce the font size for the entire table */
+.small-font {
+  font-size: 0.1rem; /* You can adjust this to your desired size */
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+

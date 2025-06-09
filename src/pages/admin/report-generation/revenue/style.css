@@ -1,0 +1,32 @@
+/* Invoice.css */
+
+@media print {
+    /* Ẩn tất cả các thành phần */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Chỉ hiển thị nội dung trong .revenue-content */
+    .revenue-content, .revenue-content * {
+        visibility: visible;
+    }
+
+    
+    .revenue-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Đảm bảo các phần tử in không bị cắt khi chuyển sang nhiều trang */
+    .revenue-content {
+        page-break-inside: avoid;
+    }
+}
+canvas{
+    width: 100%;
+    height: 100%;
+}
