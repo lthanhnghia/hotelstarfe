@@ -49,7 +49,7 @@ const LoginAdmin = () => {
                 setAlertData({ type: result.status, title: result.message });
                 setTimeout(() => {
                     setTimeout(() => {
-                        window.location.href = "http://localhost:3000/login-admin";
+                        window.location.href = "https://hotelstar.vercel.app/login-admin";
                       }, 1700);
                 }, 1500);
             }

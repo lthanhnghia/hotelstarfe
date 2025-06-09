@@ -8,7 +8,7 @@ import store from './store'
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <GoogleOAuthProvider clientId="435509292296-0rf1v3tbl70s3ae1dd1ose1hmv146iqn.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="1099175367435-gmv2kdermek9so9ma5a5fnt4ssfhsh41.apps.googleusercontent.com">
       <App />
     </GoogleOAuthProvider>
   </Provider>,

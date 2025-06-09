@@ -121,7 +121,7 @@ const RecentlyViewed = () => {
                 if (response.code == "201") {
                     setAlertData({ type: response.status, title: response.message });
                     setTimeout(() => {
-                        window.location.href = "http://localhost:3000/client/profile";
+                        window.location.href = "https://hotelstar.vercel.app/client/profile";
                     }, 1700);
                 } else {
                     setAlertData({ type: response.status, title: response.message });
@@ -158,7 +158,7 @@ const RecentlyViewed = () => {
                 if (response.code == "201") {
                     setAlertData({ type: response.status, title: response.message });
                     setTimeout(() => {
-                        window.location.href = "http://localhost:3000/client/profile";
+                        window.location.href = "https://hotelstar.vercel.app/client/profile";
                     }, 1700);
                 } else {
                     setAlertData({ type: response.status, title: response.message });

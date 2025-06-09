@@ -80,10 +80,10 @@ const AppHeaderDropdown = () => {
         </CDropdownToggle>
         <CDropdownMenu className="pt-0" placement="bottom-end">
           <CDropdownHeader className="bg-body-secondary fw-semibold mb-2">{account?.username}</CDropdownHeader>
-          <CDropdownItem href="http://localhost:3000/admin/profiles">
+          <CDropdownItem href="https://hotelstar.vercel.app/admin/profiles">
               Cập nhật thông tin
           </CDropdownItem>
-          <CDropdownItem href="http://localhost:3000/admin/changepassword">
+          <CDropdownItem href="https://hotelstar.vercel.app/admin/changepassword">
               Đổi mật khẩu
           </CDropdownItem>
           <CDropdownDivider />
