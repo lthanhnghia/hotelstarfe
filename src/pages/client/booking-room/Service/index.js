@@ -70,7 +70,7 @@ const bookingRoom = async (bookingData, navigate) => {
         }
 
         // Gửi yêu cầu đến API với axios
-        const res = await axios.post('http://localhost:8080/api/booking/sendBooking', bookingData);
+        const res = await axios.post('https://hotelstarbe.onrender.com/api/booking/sendBooking', bookingData);
 
         console.log("ABC: ", res.data);
 

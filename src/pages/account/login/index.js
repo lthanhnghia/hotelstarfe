@@ -47,7 +47,7 @@ const AuthForm = () => {
         // Gửi token lên API
         setLoading(true); // Bắt đầu loading
         try {
-          const response = await fetch('http://localhost:8080/api/account/getTokenGG', {
+          const response = await fetch('https://hotelstarbe.onrender.com/api/account/getTokenGG', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ const AuthForm = () => {
             };
             console.log("Request payload:", payload); // Log payload for inspection
 
-            const response = await fetch('http://localhost:8080/api/account/register', {
+            const response = await fetch('https://hotelstarbe.onrender.com/api/account/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -145,7 +145,7 @@ const AuthForm = () => {
         console.log("đã zo thành công");
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:8080/api/account/loginToken', {
+            const response = await fetch('https://hotelstarbe.onrender.com/api/account/loginToken', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

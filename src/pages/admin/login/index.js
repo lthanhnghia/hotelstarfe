@@ -15,7 +15,7 @@ const LoginAdmin = () => {
   const handleLoginAdmin = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/api/account/loginToken', {
+            const response = await fetch('https://hotelstarbe.onrender.com/api/account/loginToken', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

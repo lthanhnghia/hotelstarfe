@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const PUBLIC = 'http://localhost:8080';
+const PUBLIC = 'https://hotelstarbe.onrender.com';
 
 export const getDataFromAPI = async (endpoint) => {
     try {

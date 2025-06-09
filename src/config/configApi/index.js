@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import {initializeApp} from "firebase/app";
 import {getStorage} from 'firebase/storage';
 import { Cookies } from "react-cookie";
-export const BASE_URL = "http://localhost:8080/";
+export const BASE_URL = "https://hotelstarbe.onrender.com/";
 
 const request = async ({ method = "GET", path = "", data = {}, headers = {}, token = "" }) => {
   const cookie = new Cookies();
