@@ -25,53 +25,37 @@ const RecentlyViewed = () => {
     const tokens = Cookies.get("token") || null;
     const decodedToken = tokens ? jwt_decode(tokens) : null;
 
-    useEffect(() => {
-        const fetchBookings = async () => {
-            if (!decodedToken?.id) {
-                console.error("Invalid token or missing account ID.");
-                setMockBookings([]);
-                return;
-            }
+    const fetchBookings = async () => {
+    if (!decodedToken?.id) {
+        console.error("Invalid token or missing account ID.");
+        setMockBookings([]);
+        return;
+    }
 
-            try {
-                // Gọi API lấy lịch sử đặt phòng
-                console.log("ID:", decodedToken.id);
-                const response = await HistoryBookings(decodedToken.id);
-                console.log("API response:", response);
-
-                // Kiểm tra nếu API trả về mảng, lưu vào state
-                if (Array.isArray(response)) {
-                    setMockBookings(response);
-                } else {
-                    console.error("API response is not an array:", response);
-                    setMockBookings([]);
-                }
-            } catch (error) {
-                console.error("Error fetching booking history:", error);
-                setMockBookings([]);
-            }
-        };
-        // Cleanup interval nếu decodedToken thay đổi
-        if (intervalRef.current) {
-            clearInterval(intervalRef.current);
-            intervalRef.current = null;
+    try {
+        const response = await HistoryBookings(decodedToken.id);
+        
+        // Nếu không có dữ liệu (null hoặc undefined)
+        if (!response) {
+            setMockBookings([]);
+            return;
         }
 
-        // Gọi API ngay lần đầu
-        if (decodedToken?.id) {
-            fetchBookings();
-            // Thiết lập interval gọi API mỗi 15 giây
-            intervalRef.current = setInterval(() => {
-                console.log("Gọi API sau 15 giây...");
-                fetchBookings();
-            }, 15000); // 15 giây
+        // Nếu là mảng thì set
+        if (Array.isArray(response)) {
+            setMockBookings(response);
+        } else {
+            console.error("API response is not an array:", response);
+            setMockBookings([]);
         }
-        return () => {
-            if (intervalRef.current) {
-                clearInterval(intervalRef.current);
-            }
-        };
-    }, [decodedToken?.id]);
+    } catch (error) {
+        // Chỉ log lỗi nếu là lỗi khác 404 (404 thường nghĩa là "không tìm thấy dữ liệu")
+        if (error?.response?.status !== 404) {
+            console.error("Error fetching booking history:", error);
+        }
+        setMockBookings([]);
+    }
+};
 
     // Xử lý khi người dùng đổi trang
     const handlePageClick = (event) => {
