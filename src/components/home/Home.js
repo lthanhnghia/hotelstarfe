@@ -22,10 +22,7 @@ export default function Home() {
       <Rooms />
       <Services />
       <ChatApp/>
-      {/* <Sliders /> */}
-      {decodedTokens && (
-        <DiscountBanner id_account={decodedTokens.id} />
-      )}
+      
     </LayoutClient>
   );
 }

@@ -5,15 +5,18 @@ import "slick-carousel/slick/slick-theme.css";
 import { carouselData } from "../data/Data";
 import { getImageHotel } from "../../services/admin/home-info-service";
 import Alert from "../../config/alert";
-
+import img1 from "../../assets/imagess/imagehotel1.jpg";
+import img2 from "../../assets/imagess/imagehotel2.jpg";
+import img3 from "../../assets/imagess/imagehotel3.jpg";
+import img4 from "../../assets/imagess/imagehotel4.jpg";
+import img5 from "../../assets/imagess/imagehotel5.jpg";
+import img6 from "../../assets/imagess/imagehotel6.jpg";
 export default function Carousel() {
   const sliderRef = useRef(null);
-  const [image, setImage] = useState([]);
+  const [image] = useState([img1, img2, img3, img4, img5, img6]);
   const [alert, setAlert] = useState(null);
-
-  useEffect(() => {
-    handleImageHotel();
-  }, []);
+console.log("Danh sách ảnh:", image);
+ 
   const next = () => {
     if (sliderRef.current) {
       sliderRef.current.slickNext();
@@ -33,20 +36,7 @@ export default function Carousel() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  const handleImageHotel = async () => {
-    try {
-      const data = await getImageHotel();
-      if (!data) {
-        setAlert({ type: "error", title: "Lỗi không tải được ảnh" });
-      } else {
-        setImage(data);
-      }
-    } catch (error) {
-      setAlert({ type: "error", title: error });
-    }
-
-
-  }
+  
   return (
     <>
       <div className="container-fluid p-0 mb-5">
@@ -60,7 +50,7 @@ export default function Carousel() {
             <Slider ref={sliderRef} {...settings}>
               {image.map((val, index) => (
                 <div className="carousel-item" key={index}>
-                  <img className="w-100" src={val.imageName} alt="Image" height={700} />
+                  <img className="w-100" src={val} alt="Image" height={700} />
                   <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div className="p-3" style={{ maxWidth: "700px" }}>
                       <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">

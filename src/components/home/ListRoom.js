@@ -41,6 +41,7 @@ export default function ListRoom() {
             setTypeRoom(res.content);
             setTotalPages(res.totalPages); // Tổng số trang từ API
         } catch (error) {
+            console.log('lỗi ở đây nè')
             console.log("Lỗi API trả về: ", error);
         }
     };
@@ -89,6 +90,7 @@ export default function ListRoom() {
                 setAlert({ type: "error", title: "Không tìm thấy chi tiết phòng." });
             }
         } catch (error) {
+            
             setAlert({ type: "error", title: error.message });
         }
     };
@@ -350,6 +352,7 @@ export default function ListRoom() {
     };
 
     // Show alert if there's an error
+    
     const renderAlert = alert && <Alert type={alert.type} title={alert.title} />;
 
     return (
