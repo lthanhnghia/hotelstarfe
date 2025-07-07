@@ -105,7 +105,8 @@ const MyProfile = () => {
             const response = await uploadProfiles(reviewData);
             console.log("API response:", response);
 
-            if (response.code == "201") {
+            if (response.code === 201) {
+                console.log("đang vào 201");
                 Cookies.set("token", response.token, { expires: 6 / 24 });
                 setAlertData({ type: response.status, title: response.message });
                 // setTimeout(() => {

@@ -25,37 +25,53 @@ const RecentlyViewed = () => {
     const tokens = Cookies.get("token") || null;
     const decodedToken = tokens ? jwt_decode(tokens) : null;
 
-    const fetchBookings = async () => {
+   const fetchBookings = async () => {
+    // Reset alert nếu trước đó còn tồn tại
+    if (alertData) setAlertData(null);
+
     if (!decodedToken?.id) {
-        console.error("Invalid token or missing account ID.");
+        console.warn("Invalid token or missing account ID.");
         setMockBookings([]);
         return;
     }
 
     try {
         const response = await HistoryBookings(decodedToken.id);
-        
-        // Nếu không có dữ liệu (null hoặc undefined)
-        if (!response) {
+ console.log("đã vào đây1")
+        if (!response || (Array.isArray(response) && response.length === 0)) {
             setMockBookings([]);
             return;
         }
 
-        // Nếu là mảng thì set
         if (Array.isArray(response)) {
             setMockBookings(response);
         } else {
-            console.error("API response is not an array:", response);
+            console.warn("API response is not an array:", response);
             setMockBookings([]);
         }
     } catch (error) {
-        // Chỉ log lỗi nếu là lỗi khác 404 (404 thường nghĩa là "không tìm thấy dữ liệu")
+        // Chỉ log lỗi nếu thật sự quan trọng
         if (error?.response?.status !== 404) {
-            console.error("Error fetching booking history:", error);
+            console.warn("Silent error fetching booking history:", error);
         }
+        // KHÔNG setAlertData nữa
         setMockBookings([]);
     }
 };
+console.log("decodedToken:", decodedToken.id);
+useEffect(() => {
+    // Gọi lần đầu khi component mount
+    console.log("đã vào đây")
+    fetchBookings();
+
+    // Thiết lập interval gọi lại mỗi 15 giây (15000 ms)
+    const intervalId = setInterval(() => {
+        fetchBookings();
+    }, 15000); // 15 giây
+
+    // Dọn dẹp khi unmount (ngăn leak memory)
+    return () => clearInterval(intervalId);
+}, []);
 
     // Xử lý khi người dùng đổi trang
     const handlePageClick = (event) => {
@@ -139,7 +155,7 @@ const RecentlyViewed = () => {
                 console.log("API response:", response);
 
                 // Kiểm tra nếu API trả về mảng, lưu vào state
-                if (response.code == "201") {
+                if (response.code == 201) {
                     setAlertData({ type: response.status, title: response.message });
                     setTimeout(() => {
                         window.location.href = "https://hotelstar.vercel.app/client/profile";

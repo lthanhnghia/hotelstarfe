@@ -43,7 +43,6 @@ const AuthForm = () => {
     const navigate = useNavigate();
     const handleLoginSuccess = async (credentialResponse) => {
         const tokenGG = credentialResponse.credential;
-        console.log(tokenGG);
         // Gửi token lên API
         setLoading(true); // Bắt đầu loading
         try {
@@ -56,15 +55,18 @@ const AuthForm = () => {
                   email: tokenGG, // Gửi email hoặc thông tin khác
               }),
           });
-      
+         
           if (!response.ok) {
-              throw new Error('Network response was not ok');
+              const errorData = await response.json();
+              throw new Error(errorData.message || 'Đăng nhập thất bại!');
           }
           const data = await response.json(); // Phân tích phản hồi JSON
+          
           if(data.token == null){
             setLoading(false); // Kết thúc loading sau 2 giây giả lập
             toast.error("Đăng Nhập thất bại,email đã tồn tại");
           }
+          console.log(data);
           Cookies.set("token", data.token, { expires:  6 /24 }); 
           const tokens =  Cookies.get("token");
           const decodedTokenCookie = jwt_decode(tokens);
@@ -92,6 +94,8 @@ const AuthForm = () => {
             }, 1500);
           }
       } catch (error) {
+             setLoading(false); // Kết thúc loading sau 2 giây giả lập
+            toast.error(error.message);
           console.error("Error posting data to API:", error);
       }
     };

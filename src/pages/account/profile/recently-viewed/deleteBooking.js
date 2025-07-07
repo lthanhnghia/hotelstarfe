@@ -5,7 +5,7 @@ import { request } from '../../../../config/configApi';
 const deleteBooking = async (datas) => {
     try {
       const res = await request({
-        method: "POST", // Phương thức HTTP GET
+        method: "PUT", // Phương thức HTTP GET
         path: `/api/booking/delete-booking`, // Truyền accountId thẳng trên URL
         data:datas
         //headers: { Authorization: `Bearer ${token}` }, // Thêm token vào header nếu cần

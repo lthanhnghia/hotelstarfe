@@ -15,10 +15,11 @@ const ForgotPasswordEmail = () => {
         setIsLoading(true);
         try {
             const res = await sendEmailForgotPassword(data.email);
-            if (res?.message === 'Email sent successfully') {
+            console.log(res?.code)
+            if (res?.code === 200) {
                 setTimeout(() => {
                     setIsLoading(false);
-                    setMessage('Email đặt lại mật khẩu đã được gửi!');
+                    setMessage(res?.message);
                 }, 2000);
             } else {
                 throw new Error('Không thể gửi email');

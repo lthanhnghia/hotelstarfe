@@ -138,7 +138,7 @@ const handleChangePassword = async (event) => {
     // Pass the data and token to the changpass function
     const response = await changpass(data, tokens);
     console.log(response)
-    if (response && response.code === "200") {
+    if (response && response.code === 200) {
       setAlertData({ type: response.status, title: response.message });
       reset(); // Reset form fields if needed
       setTimeout(() => {
