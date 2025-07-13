@@ -21,7 +21,7 @@ useEffect(() => {
       setMessages([
         {
           role: "assistant",
-          text: "Chào bạn! Tôi là Gemini, trợ lý ảo của khách sạn. Tôi sẵn sàng giúp bạn tìm kiếm và đặt phòng phù hợp nhất. Bạn cần hỗ trợ gì?",
+          text: "Tôi là Gemini – trợ lý tư vấn phòng. Bạn muốn hỏi về giá, tiện nghi hay loại phòng nào?",
         },
       ]);
     }, 1000);
